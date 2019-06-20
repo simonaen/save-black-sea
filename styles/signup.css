@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Playfair+Display');
+
+/* Global */
+* {
+    transition: all 0.3s ease-in;
+    color: #fff;
+}
+
+body {
+    background: rgb(23, 25, 65);
+    margin: 0;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    background-image: url("../img/dots.b81dabc0.png");
+    background-size: contain;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    overflow-x: hidden;
+}
+
+.square {
+    position: absolute;
+    -webkit-transition: .5s ease-out;
+    transition: .5s ease-out;
+    transition: transform 0.5s;
+    border-radius: 2px;
+    background-size: 100%;
+    border-radius: 20%;
+    background: #ba54f5;
+    background: linear-gradient(0deg, #ba54f5, #e14eca);
+    z-index: 1;
+}
+
+.square-1 {
+    height: 300px;
+    width: 300px;
+    top: 175px;
+    right: 150px;
+    opacity: .8;
+}
+
+.square-2 {
+    height: 120px;
+    width: 120px;
+    opacity: .9;
+    top: 310px;
+    right: 390px;
+}
+
+.square-3 {
+    width: 200px;
+    height: 200px;
+    opacity: .3;
+    top: -50px;
+    right: 400px;
+}
+
+.square-4 {
+    height: 70px;
+    width: 70px;
+    opacity: .9;
+    top: 105px;
+    right: 20px;
+}
+
+.nav-bar {
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-bar ul {
+    margin: 0;
+}
+
+.nav-bar li {
+    float: left;
+    margin: 0;
+    margin-right: 0.4rem;
+}
+
+/* Main */
+main {
+    height: 80vh;
+}
+
+/* Register Section */
+.register-block {
+    overflow: hidden;
+    text-align: left;
+    z-index: 2;
+    background: #1f2251;
+    border: 0;
+    position: relative;
+    /* width: 20rem; */
+    max-width: 30%;
+    max-height: 60vh;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+    padding: 3%;
+    margin-left: 20%;
+}
+
+.header-sec {
+    align-self: flex-start;
+}
+
+.head-square {
+    background-image: url("../img/purple-square.png");
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -210px;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.header-sec h2 {
+    color: #1f2251;
+}
+
+/* Registration form */
+.form>div {
+    padding: 8px;
+}
+
+.form>div>label {
+    display: block;
+}
+
+.form input:not(.checkbox) {
+    background: #1f2251;
+    border: solid 0.04rem #ba54f5;
+    border-radius: 5px;
+    width: 17vw;
+    padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+    font-size: 1rem;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form input::placeholder {
+    color: rgba(255, 255, 255, 0.075);
+    font-size: 0.8em;
+}
+
+.form input::placeholder:focus{
+    display: none;
+    transition: display 0.3s;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #ba54f5;
+  box-shadow: 0 0 0px 1000px #1f2251 inset;
+  -webkit-text-fill-color: #8e93d6;
+  -webkit-box-shadow: 0 0 0px 1000px #1f2251 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.form label {
+    font-size: 1em;
+}
+
+.form .terms {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    line-height: 1em;
+}
+
+.form .terms a {
+    color: #ba54f5
+}
+
+.form .terms input[type=checkbox]+label:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+
+}
+
+.form input[type=submit] {
+    margin-left: 8px;
+    background: linear-gradient(50deg, #ba54f5, #e14eca);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #1f2251;
+    transition: transform 0.4s ease-in-out;
+}
+
+.form input[type=submit]:hover {
+    background: linear-gradient(-100deg, #e14eca, #ba54f5);
+    transform: translateX(5px);
+}
+
+.form .warning{
+    display: none;
+    opacity: 0;
+    padding: 5px;
+    font-size: 0.8em;
+    color: #ba54f5;
+    text-align: right;
+    transition: display 0s, opacity 0.5s linear;
+}
+
+.form i{
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+
+
+/* Footer */
+footer {
+    padding: 0.6rem;
+    bottom: 0;
+    text-align: center;
+    font-size: 0.7em;
+    background: rgba(36, 48, 80, 0.9);
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+}
+
+@media(min-width:776px){
+    .register-block{
+        width: 20em;
+    }
+    .head-square {
+        width:300px;        
+        margin-left: -50px;
+        margin-top: -210px;
+    }
+}
+
+/* Medium screens */
+@media(max-width:775px){
+    .head-square {
+        position: absolute;
+        margin-left: -90px;
+        margin-top: -180px;
+    }
+    
+    .header-sec h2 {
+        color: #1f2251;
+        font-weight: 900;
+    }
+}
+
+/* Small screens */
+@media(max-width:600px) {
+
+    /* Nav Bar */
+    .nav-bar {
+        font-size: 1.2em;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* Main */
+    main {
+        height: 70vh;
+    }
+
+    /* Register Section */
+    .register-block {
+        max-width: 87%;
+        min-height: 60vh;
+        margin-top: 17%;
+        margin: auto;
+        align-items: flex-start;
+    }
+    .head-square {        
+        width: 400px;
+        margin-left: -60px;
+        margin-top: -190px;
+    }
+    
+    .header-sec h2 {
+        margin-bottom: 0;
+        font-size: 2.1em;
+    }
+    .form{
+        margin: auto;
+    }
+    .form .form-input{
+        height: 20px;
+        width: 70vw !important;
+    }
+
+    .form input[type=submit]{
+        width: 70vw;
+    }
+}
+
+/* XS screens */
+@media(max-width:375px){
+    
+    .head-square {     
+        width: 280px;
+        height: 280px;   
+        margin-left: -50px;
+        margin-top: -150px;
+    }
+    
+    .header-sec h2 {
+        margin-bottom: 0;
+        font-size: 2.1em;
+    }
+}
+
+/* Nav Bar */
